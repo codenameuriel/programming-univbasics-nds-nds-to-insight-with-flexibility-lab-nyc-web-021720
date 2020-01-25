@@ -66,11 +66,11 @@ return worldwide_gross_per_studio
 end
 
 
-  def movies_with_directors_set(source)
-    final_array = []
-    movies_array =[]
-    row_index = 0
-    while row_index < source.size do
+def movies_with_directors_set(source)
+  movies_with_directors_name = []
+  row_index = 0
+  while row_index < source.size do
+      movies_array =[]
       movies_index = 0
       while movies_index < source[row_index][:movies].size do
         name = source[row_index][:name]
@@ -80,6 +80,7 @@ end
       end
       final_array << movies_array
       row_index += 1
+      
     end
     return final_array
   end

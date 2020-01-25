@@ -75,7 +75,7 @@ def movies_with_directors_set(source)
     while movies_index < source[row_index][:movies].size do
       name = source[row_index][:name]
       movies_collection = source[row_index][:movies][movies_index]
-      movies_array << movie_with_director_name(name, movies_collection)
+      single_director_movies_array << movie_with_director_name(name, movies_collection)
       movies_index += 1
     end
     movies_with_directors_name << single_director_movies_array

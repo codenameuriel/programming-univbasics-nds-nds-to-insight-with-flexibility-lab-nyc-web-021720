@@ -66,22 +66,23 @@ return worldwide_gross_per_studio
 end
 
 
-def movies_with_directors_set(source)
+  def movies_with_directors_set(source)
     final_array = []
+    movies_array =[]
     row_index = 0
     while row_index < source.size do
       movies_index = 0
       while movies_index < source[row_index][:movies].size do
         name = source[row_index][:name]
         movies_collection = source[row_index][:movies][movies_index]
-        final_array << movie_with_director_name(name, movies_collection)
+        movies_array << movie_with_director_name(name, movies_collection)
         movies_index += 1
       end
+      final_array << movies_array
       row_index += 1
     end
     return final_array
   end
-
 # ----------------    End of Your Code Region --------------------
 # Don't edit the following code! Make the methods above work with this method
 # call code. You'll have to "see-saw" to get this to work!

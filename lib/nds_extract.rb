@@ -78,7 +78,7 @@ def movies_with_directors_set(source)
       movies_array << movie_with_director_name(name, movies_collection)
       movies_index += 1
     end
-    final_array << movies_array
+    movies_with_directors_name << movies_array
     row_index += 1
   end
   return final_array

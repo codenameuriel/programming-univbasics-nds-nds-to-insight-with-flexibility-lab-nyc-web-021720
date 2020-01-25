@@ -81,7 +81,7 @@ def movies_with_directors_set(source)
     movies_with_directors_name << single_director_movies_array
     row_index += 1
   end
-  return final_array
+  return movies_with_directors_name
 end
 
 # ----------------    End of Your Code Region --------------------

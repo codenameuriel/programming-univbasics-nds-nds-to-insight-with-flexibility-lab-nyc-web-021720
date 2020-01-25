@@ -70,7 +70,7 @@ def movies_with_directors_set(source)
   final_array = []
   row_index = 0
   while row_index < source.size do
-    movies_index = source[row_index][:movies]
+    movies_index = 0 
     while movies_index < source[row_index][:movies].size do
       name = source[row_index][:name]
       movies_collection = source[row_index][:movies][movies_index]

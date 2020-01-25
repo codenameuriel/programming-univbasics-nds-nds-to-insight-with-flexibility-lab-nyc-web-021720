@@ -67,19 +67,19 @@ end
 
 
 def movies_with_directors_set(source)
-final_array = []
-row_index = 0
-while row_index < source.size do
-  movies_index = source[row_index][:movies]
-  while movies_index < source[row_index][:movies].size do
-    name = source[row_index][:name]
-    movies_collection = source[row_index][:movies][movies_index]
-    final_array << movie_with_director_name(name, movies_collection)
-    movies_index += 1
+  final_array = []
+  row_index = 0
+  while row_index < source.size do
+    movies_index = source[row_index][:movies]
+    while movies_index < source[row_index][:movies].size do
+      name = source[row_index][:name]
+      movies_collection = source[row_index][:movies][movies_index]
+      final_array << movie_with_director_name(name, movies_collection)
+      movies_index += 1
+    end
+    row_index += 1
   end
-  row_index += 1
-end
-return final_array
+  return final_array
 end
 
 # ----------------    End of Your Code Region --------------------

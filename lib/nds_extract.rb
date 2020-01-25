@@ -51,18 +51,18 @@ end
 
 def gross_per_studio(collection)
   worldwide_gross_per_studio = {}
-row_index = 0 
-while row_index < collection.size do
-  studio = collection[row_index][:studio]
-  gross = collection[row_index][:worldwide_gross]
-  if !worldwide_gross_per_studio[studio]
-    worldwide_gross_per_studio[studio] = gross
-  else
-    worldwide_gross_per_studio[studio] += gross
+  row_index = 0 
+  while row_index < collection.size do
+    studio = collection[row_index][:studio]
+    gross = collection[row_index][:worldwide_gross]
+    if !worldwide_gross_per_studio[studio]
+      worldwide_gross_per_studio[studio] = gross
+    else
+      worldwide_gross_per_studio[studio] += gross
+    end
+    row_index += 1
   end
-  row_index += 1
-end
-return worldwide_gross_per_studio 
+  return worldwide_gross_per_studio 
 end
 
 
